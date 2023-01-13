@@ -5,15 +5,16 @@ import static com.diogonunes.jcolor.Ansi.colorize;
 public class Piece {
 
     private PieceType shape;
+    private Cell cell;
 
-    public Piece(PieceType shape){
+    public Piece(PieceType shape,Cell cell){
         this.shape = shape;
-
+        this.cell=cell;
     }
 
     @Override
     public String toString(){
-        return colorize(shape.toString(),shape.color.getAttribute());
+        return colorize(shape.toString(),shape.color.getAttribute(),cell.getColor().getAttribute());
     }
 
     public enum PieceType {

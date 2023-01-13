@@ -10,6 +10,14 @@ public class Coordinate {
         this.row = row;
     }
 
+    public char getColumn() {
+        return column;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
     public Coordinate up(){
         return new Coordinate(column,row-1);
     }
