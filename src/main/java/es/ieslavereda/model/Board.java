@@ -34,6 +34,16 @@ public class Board {
         return cells[coordinate.getRow()-1][coordinate.getColumn()-'A'];
     }
 
+    public void highlight(Coordinate[] coordinates){
+        for(Coordinate c : coordinates)
+            getCell(c).highlight();
+    }
+    public void resetColors(){
+        for(Cell[] row : cells)
+            for(Cell c : row)
+                c.resetColor();
+    }
+
     @Override
     public String toString(){
         String output ="   A  B  C  D  E  F  G  H\n";

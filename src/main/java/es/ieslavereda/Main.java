@@ -10,11 +10,13 @@ public class Main {
         b.placePieces();
 
         Coordinate[] coordinates = b.getCell(new Coordinate('C',6)).getPiece().getNextMovements();
-
+        b.highlight(coordinates);
 
         System.out.println(b);
-        for(Coordinate c : coordinates )
-            System.out.print(c+" ");
+        b.resetColors();
+        System.out.println(b);
+
+
 
     }
 }
