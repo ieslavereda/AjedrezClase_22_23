@@ -20,6 +20,8 @@ public class Board {
         p.putInYourPlace();
         p = new WhiteKnight(getCell(new Coordinate('C',6)));
         p.putInYourPlace();
+        p = new BlackKnight(getCell(new Coordinate('D',8)));
+        p.putInYourPlace();
     }
 
     public Cell getCell(Coordinate  coordinate){

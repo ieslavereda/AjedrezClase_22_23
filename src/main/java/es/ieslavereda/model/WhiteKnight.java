@@ -6,5 +6,4 @@ public class WhiteKnight extends Knight{
         super(PieceType.WHITE_KNIGHT,cell);
     }
 
-
 }

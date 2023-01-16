@@ -9,7 +9,7 @@ public class Main {
 
         b.placePieces();
 
-        Coordinate[] coordinates = b.getCell(new Coordinate('B',8)).getPiece().getNextMovements();
+        Coordinate[] coordinates = b.getCell(new Coordinate('C',6)).getPiece().getNextMovements();
 
 
         System.out.println(b);

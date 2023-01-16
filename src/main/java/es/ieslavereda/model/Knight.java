@@ -20,6 +20,25 @@ public abstract class Knight extends Piece{
         check(c);
         c = position.up().up().right();
         check(c);
+
+        // Down
+        c = position.down().down().right();
+        check(c);
+        c = position.down().down().left();
+        check(c);
+
+        // Left
+        c = position.left().left().up();
+        check(c);
+        c = position.left().left().down();
+        check(c);
+
+        // Right
+        c = position.right().right().up();
+        check(c);
+        c = position.right().right().down();
+        check(c);
+
         return coordinates;
     }
 
