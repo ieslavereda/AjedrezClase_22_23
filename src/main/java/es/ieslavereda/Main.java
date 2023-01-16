@@ -7,7 +7,7 @@ public class Main {
 
         Board b = new Board();
 
-
+        b.placePieces();
 
         System.out.println(b);
 

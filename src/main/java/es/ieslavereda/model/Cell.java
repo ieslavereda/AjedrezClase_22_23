@@ -24,6 +24,14 @@ public class Cell {
         this.color = original;
     }
 
+    public Board getBoard() {
+        return board;
+    }
+
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
+
     public Color getColor() {
         return color;
     }

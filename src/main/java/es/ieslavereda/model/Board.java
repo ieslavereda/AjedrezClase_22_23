@@ -14,6 +14,24 @@ public class Board {
 
     }
 
+    public void placePieces(){
+        Piece p;
+        p = new WhiteKnight(getCell(new Coordinate('B',8)));
+        p.putInYourPlace();
+        p = new WhiteKnight(getCell(new Coordinate('G',8)));
+        p.putInYourPlace();
+    }
+
+    public Cell getCell(Coordinate  coordinate){
+
+        if(coordinate.getRow()<1 || coordinate.getRow()>8)
+            return null;
+        if(coordinate.getColumn()<'A' || coordinate.getColumn()>'H')
+            return null;
+
+        return cells[coordinate.getRow()-1][coordinate.getColumn()-'A'];
+    }
+
     @Override
     public String toString(){
         String output ="   A  B  C  D  E  F  G  H\n";

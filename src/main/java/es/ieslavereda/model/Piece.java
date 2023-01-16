@@ -2,7 +2,7 @@ package es.ieslavereda.model;
 
 import static com.diogonunes.jcolor.Ansi.colorize;
 
-public class Piece {
+public abstract class Piece {
 
     private PieceType shape;
     private Cell cell;
@@ -12,10 +12,23 @@ public class Piece {
         this.cell=cell;
     }
 
+    public Cell getCell() {
+        return cell;
+    }
+    public Color getColor(){
+        return shape.color;
+    }
+
+    public void putInYourPlace(){
+        cell.setPiece(this);
+    }
+
     @Override
     public String toString(){
         return colorize(shape.toString(),shape.color.getAttribute(),cell.getColor().getAttribute());
     }
+
+    public abstract Coordinate[] getNextMovements();
 
     public enum PieceType {
 
