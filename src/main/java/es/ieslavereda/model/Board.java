@@ -18,7 +18,7 @@ public class Board {
         Piece p;
         p = new WhiteKnight(getCell(new Coordinate('B',8)));
         p.putInYourPlace();
-        p = new WhiteKnight(getCell(new Coordinate('G',8)));
+        p = new WhiteKnight(getCell(new Coordinate('C',6)));
         p.putInYourPlace();
     }
 

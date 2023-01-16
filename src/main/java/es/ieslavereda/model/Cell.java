@@ -27,6 +27,9 @@ public class Cell {
     public Board getBoard() {
         return board;
     }
+    public Piece getPiece(){
+        return piece;
+    }
 
     public Coordinate getCoordinate() {
         return coordinate;
@@ -72,7 +75,7 @@ public class Cell {
 
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return piece == null;
     }
 
