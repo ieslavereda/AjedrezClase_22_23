@@ -10,6 +10,7 @@ public abstract class Piece {
     public Piece(PieceType shape,Cell cell){
         this.shape = shape;
         this.cell=cell;
+        putInYourPlace();
     }
 
     public Cell getCell() {
