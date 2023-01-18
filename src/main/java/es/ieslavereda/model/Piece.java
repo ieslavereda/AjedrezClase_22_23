@@ -5,7 +5,7 @@ import static com.diogonunes.jcolor.Ansi.colorize;
 public abstract class Piece {
 
     private PieceType shape;
-    private Cell cell;
+    protected Cell cell;
 
     public Piece(PieceType shape,Cell cell){
         this.shape = shape;
