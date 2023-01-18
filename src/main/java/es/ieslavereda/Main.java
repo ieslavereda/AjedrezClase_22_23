@@ -9,11 +9,13 @@ public class Main {
 
         b.placePieces();
 
-        Coordinate[] coordinates = b.getCell(new Coordinate('B',2)).getPiece().getNextMovements();
-        b.highlight(coordinates);
+        b.getCell(new Coordinate('D',7)).getPiece().moveTo(new Coordinate('D',8));
 
-        System.out.println(b);
-        b.resetColors();
+//        Coordinate[] coordinates = b.getCell(new Coordinate('B',2)).getPiece().getNextMovements();
+//        b.highlight(coordinates);
+//
+//        System.out.println(b);
+//        b.resetColors();
         System.out.println(b);
 
 

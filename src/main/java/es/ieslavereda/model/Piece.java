@@ -13,6 +13,17 @@ public abstract class Piece {
         putInYourPlace();
     }
 
+    public void moveTo(Coordinate c){
+
+        Board b = getCell().getBoard();
+        // Check if the cell exists
+        if(b.getCell(c)!=null) {
+            getCell().setPiece(null);
+            Cell cell = b.getCell(c);
+            cell.setPiece(this);
+            this.cell = cell;
+        }
+    }
     public Cell getCell() {
         return cell;
     }

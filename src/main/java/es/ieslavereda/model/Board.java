@@ -19,6 +19,7 @@ public class Board {
         new WhiteKnight(getCell(new Coordinate('C', 6)));
         new BlackKnight(getCell(new Coordinate('E', 5)));
         new BlackQueen(getCell(new Coordinate('B', 2)));
+        new BlackPawn(getCell(new Coordinate('D',7)));
     }
 
     public Cell getCell(Coordinate coordinate) {

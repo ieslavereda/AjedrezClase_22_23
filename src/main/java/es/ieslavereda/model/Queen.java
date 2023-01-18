@@ -11,9 +11,9 @@ public abstract class Queen extends Piece {
     @Override
     public Coordinate[] getNextMovements() {
 
-        Coordinate[] coordinates1 = Rook.getNextMovementsAsRook(this);
-        Coordinate[] coordinates2 = Bishop.getNextMovementsAsBishop(this);
+        Coordinate[] rookMovements = Rook.getNextMovementsAsRook(this);
+        Coordinate[] bishopMovements = Bishop.getNextMovementsAsBishop(this);
 
-        return Tool.merge(coordinates1,coordinates2);
+        return Tool.merge(rookMovements,bishopMovements);
     }
 }
