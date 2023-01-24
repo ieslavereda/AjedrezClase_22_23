@@ -15,11 +15,31 @@ public class Board {
     }
 
     public void placePieces() {
+        new WhiteRook(getCell(new Coordinate('A',8)));
+        new WhiteRook(getCell(new Coordinate('H',8)));
         new WhiteKnight(getCell(new Coordinate('B', 8)));
-        new WhiteKnight(getCell(new Coordinate('C', 6)));
-        new BlackKnight(getCell(new Coordinate('E', 5)));
-        new BlackQueen(getCell(new Coordinate('B', 2)));
-        new BlackPawn(getCell(new Coordinate('D',7)));
+        new WhiteKnight(getCell(new Coordinate('G', 8)));
+        new WhiteBishop(getCell(new Coordinate('C',8)));
+        new WhiteBishop(getCell(new Coordinate('F',8)));
+        new WhiteQueen(getCell(new Coordinate('D',8)));
+        new WhiteKing(getCell(new Coordinate('E',8)));
+
+        new BlackRook(getCell(new Coordinate('A',1)));
+        new BlackRook(getCell(new Coordinate('H',1)));
+        new BlackKnight(getCell(new Coordinate('B', 1)));
+        new BlackKnight(getCell(new Coordinate('G', 1)));
+        new BlackKnight(getCell(new Coordinate('C',1)));
+        new BlackKnight(getCell(new Coordinate('F',1)));
+        new BlackQueen(getCell(new Coordinate('D',1)));
+        new BlackKing(getCell(new Coordinate('E',1)));
+
+        for(int i='A';i<='H';i++)
+            new WhitePawn(getCell(new Coordinate((char)i,7)));
+
+        for(int i='A';i<='H';i++)
+            new BlackPawn(getCell(new Coordinate((char)i,2)));
+
+
     }
 
     public Cell getCell(Coordinate coordinate) {

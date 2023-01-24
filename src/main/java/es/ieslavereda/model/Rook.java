@@ -4,8 +4,21 @@ import es.ieslavereda.Tool;
 
 public abstract  class Rook extends Piece {
 
+    private boolean moved;
+
     public Rook(PieceType pieceType, Cell cell) {
         super(pieceType, cell);
+        moved = false;
+    }
+
+    public boolean isMoved() {
+        return moved;
+    }
+
+    @Override
+    public void moveTo(Coordinate c) {
+        super.moveTo(c);
+        moved=true;
     }
 
     public static Coordinate[] getNextMovementsAsRook(Piece p) {

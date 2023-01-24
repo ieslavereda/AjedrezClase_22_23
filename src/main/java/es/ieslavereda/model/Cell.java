@@ -80,8 +80,8 @@ public class Cell {
     }
 
     enum Color {
-        WHITE_CELL(Attribute.BACK_COLOR(180, 180, 180)),
-        BLACK_CELL(Attribute.BACK_COLOR(100, 100, 100)),
+        WHITE_CELL(Attribute.BACK_COLOR(229, 229, 203)),
+        BLACK_CELL(Attribute.BACK_COLOR(160, 135, 123)),
         HIGHLIGHT_KILL_WHITE(Attribute.BACK_COLOR(180, 0, 0)),
         HIGHLIGHT_KILL_BLACK(Attribute.BACK_COLOR(130, 0, 0)),
         HIGHLIGHT_WHITE(Attribute.BACK_COLOR(180, 180, 0)),
