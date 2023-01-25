@@ -1,5 +1,7 @@
 package es.ieslavereda.model;
 
+import es.ieslavereda.tad.Lista;
+
 public abstract class King extends Piece{
 
     private boolean moved;
@@ -14,7 +16,7 @@ public abstract class King extends Piece{
     }
 
     @Override
-    public Coordinate[] getNextMovements() {
-        return new Coordinate[0];
+    public Lista getNextMovements() {
+        return new Lista();
     }
 }

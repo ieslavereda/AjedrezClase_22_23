@@ -1,5 +1,7 @@
 package es.ieslavereda.model;
 
+import es.ieslavereda.tad.Lista;
+
 import static com.diogonunes.jcolor.Ansi.colorize;
 
 public abstract class Piece {
@@ -40,7 +42,7 @@ public abstract class Piece {
         return colorize(shape.toString(),shape.color.getAttribute(),cell.getColor().getAttribute());
     }
 
-    public abstract Coordinate[] getNextMovements();
+    public abstract Lista getNextMovements();
 
     public enum PieceType {
 

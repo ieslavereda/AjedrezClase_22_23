@@ -1,5 +1,7 @@
 package es.ieslavereda.model;
 
+import es.ieslavereda.tad.Lista;
+
 public class Board {
 
     private Cell[][] cells;
@@ -52,8 +54,9 @@ public class Board {
         return cells[coordinate.getRow() - 1][coordinate.getColumn() - 'A'];
     }
 
-    public void highlight(Coordinate[] coordinates) {
-        for (Coordinate c : coordinates)
+    public void highlight(Lista coordinates) {
+        Coordinate c;
+        while((c=coordinates.remove(0))!=null)
             getCell(c).highlight();
     }
 

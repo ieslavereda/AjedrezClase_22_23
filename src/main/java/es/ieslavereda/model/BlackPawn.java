@@ -1,5 +1,7 @@
 package es.ieslavereda.model;
 
+import es.ieslavereda.tad.Lista;
+
 public final class BlackPawn extends Pawn{
     public BlackPawn(Cell cell) {
         super(PieceType.BLACK_PAWN, cell);
@@ -14,8 +16,8 @@ public final class BlackPawn extends Pawn{
 //    }
 
     @Override
-    public Coordinate[] getNextMovements() {
-        return new Coordinate[0];
+    public Lista getNextMovements() {
+        return new Lista();
     }
 
     @Override

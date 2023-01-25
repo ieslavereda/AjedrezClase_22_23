@@ -1,5 +1,7 @@
 package es.ieslavereda.model;
 
+import es.ieslavereda.tad.Lista;
+
 public class WhitePawn extends Pawn{
 
     public WhitePawn(Cell cell) {
@@ -13,7 +15,7 @@ public class WhitePawn extends Pawn{
     }
 
     @Override
-    public Coordinate[] getNextMovements() {
-        return new Coordinate[0];
+    public Lista getNextMovements() {
+        return new Lista();
     }
 }

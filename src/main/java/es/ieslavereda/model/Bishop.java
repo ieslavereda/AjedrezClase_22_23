@@ -1,6 +1,7 @@
 package es.ieslavereda.model;
 
 import es.ieslavereda.Tool;
+import es.ieslavereda.tad.Lista;
 
 public abstract class Bishop extends Piece{
 
@@ -8,8 +9,8 @@ public abstract class Bishop extends Piece{
         super(pieceType,cell);
     }
 
-    public static Coordinate[] getNextMovementsAsBishop(Piece p) {
-        Coordinate[] coordinates = new Coordinate[0];
+    public static Lista getNextMovementsAsBishop(Piece p) {
+        Lista coordinates = new Lista();
         Cell cell = p.getCell();
         Board board = cell.getBoard();
         Color color = p.getColor();
@@ -20,44 +21,44 @@ public abstract class Bishop extends Piece{
         // UP-LEFT
         c=original.upLeft();
         while (board.getCell(c)!=null && board.getCell(c).isEmpty()) {
-            coordinates = Tool.add(coordinates, c);
+            coordinates.add(c);
             c=c.upLeft();
         }
         if(board.getCell(c)!=null && board.getCell(c).getPiece().getColor()!=color)
-            coordinates = Tool.add(coordinates,c);
+            coordinates.add(c);
 
         // UP-RIGHT
         c=original.upRight();
         while (board.getCell(c)!=null && board.getCell(c).isEmpty()) {
-            coordinates = Tool.add(coordinates, c);
+            coordinates.add(c);
             c=c.upRight();
         }
         if(board.getCell(c)!=null && board.getCell(c).getPiece().getColor()!=color)
-            coordinates = Tool.add(coordinates,c);
+            coordinates.add(c);
 
         // DOWN-RIGHT
         c=original.downRight();
         while (board.getCell(c)!=null && board.getCell(c).isEmpty()) {
-            coordinates = Tool.add(coordinates, c);
+            coordinates.add(c);
             c=c.downRight();
         }
         if(board.getCell(c)!=null && board.getCell(c).getPiece().getColor()!=color)
-            coordinates = Tool.add(coordinates,c);
+            coordinates.add(c);
 
         // DOWN-LEFT
         c=original.downLeft();
         while (board.getCell(c)!=null && board.getCell(c).isEmpty()) {
-            coordinates = Tool.add(coordinates, c);
+            coordinates.add( c);
             c=c.downLeft();
         }
         if(board.getCell(c)!=null && board.getCell(c).getPiece().getColor()!=color)
-            coordinates = Tool.add(coordinates,c);
+            coordinates.add(c);
 
         return coordinates;
     }
 
     @Override
-    public Coordinate[] getNextMovements() {
+    public Lista getNextMovements() {
         return getNextMovementsAsBishop(this);
     }
 }
