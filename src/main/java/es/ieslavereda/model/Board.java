@@ -10,6 +10,8 @@ public class Board {
 
     public Board() {
 
+        this.deletePieceManager = new DeletePieceManager();
+
         cells = new Cell[8][8];
 
         for (int row = 0; row <= 7; row++)
@@ -71,14 +73,15 @@ public class Board {
 
     @Override
     public String toString() {
-        String output = "   A  B  C  D  E  F  G  H\n";
+        String output = "       A  B  C  D  E  F  G  H\n";
         for (int row = 0; row <= 7; row++) {
-            output += (row + 1) + " ";
+            output += "    " + (row + 1) + " ";
             for (int col = 0; col <= 7; col++)
                 output += cells[row][col];
             output += " " + (row + 1) + "\n";
         }
-        output += "   A  B  C  D  E  F  G  H";
+        output += "        A  B  C  D  E  F  G  H\n";
+        output += "\n\n"+deletePieceManager.toString();
         return output;
     }
 }

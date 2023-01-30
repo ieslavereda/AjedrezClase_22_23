@@ -34,17 +34,51 @@ public class ListaDE {
             tail=node;
         }
         size++;
-
     }
 
     public Piece removeHead(){
-        return null;
+
+        if(tail==null)
+            return null;
+
+        Piece piece = head.info;
+        if(size==1){
+            head = null;
+            tail = null;
+        }else {
+            head = head.getNext();
+            head.setPrevious(null);
+        }
+        size--;
+        return piece;
     }
     public Piece removeTail(){
-        return null;
+        if(tail==null)
+            return null;
+
+        Piece piece = head.info;
+        if(size==1){
+            head = null;
+            tail = null;
+        }else {
+            tail = tail.getPrevious();
+            tail.setNext(null);
+        }
+        size--;
+        return piece;
     }
     public int count(Piece.PieceType pieceType){
-        return -1;
+
+        Node aux = head;
+        int count = 0;
+
+        while(aux!=null){
+            if(aux.getInfo().getShape()==pieceType)
+                count++;
+            aux=aux.getNext();
+        }
+
+        return count;
     }
 
     @Override

@@ -33,6 +33,10 @@ public abstract class Piece {
         return shape.color;
     }
 
+    public PieceType getShape() {
+        return shape;
+    }
+
     public void putInYourPlace(){
         cell.setPiece(this);
     }
@@ -67,6 +71,10 @@ public abstract class Piece {
 
         public char getShape() {
             return shape;
+        }
+
+        public Color getColor() {
+            return color;
         }
 
         @Override
