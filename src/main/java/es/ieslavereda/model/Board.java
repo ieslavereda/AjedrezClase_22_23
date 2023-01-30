@@ -6,7 +6,10 @@ public class Board {
 
     private Cell[][] cells;
 
+    private IDeletePieceManager deletePieceManager;
+
     public Board() {
+
         cells = new Cell[8][8];
 
         for (int row = 0; row <= 7; row++)

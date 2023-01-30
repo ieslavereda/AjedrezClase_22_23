@@ -11,6 +11,7 @@ public abstract class Queen extends Piece {
 
     @Override
     public Lista getNextMovements() {
-       return new Lista(Rook.getNextMovementsAsRook(this)).addAll(Bishop.getNextMovementsAsBishop(this));
+       return Rook.getNextMovementsAsRook(this).
+               addAll(Bishop.getNextMovementsAsBishop(this));
     }
 }
