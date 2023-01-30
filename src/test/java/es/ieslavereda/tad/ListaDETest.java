@@ -33,4 +33,21 @@ class ListaDETest {
         });
 
     }
+
+    @Test
+    void addTail() {
+        ListaDE lista = new ListaDE();
+        lista.addTail(new WhiteQueen(new Cell(new Coordinate('a',2),board)));
+        lista.addTail(new BlackQueen(new Cell(new Coordinate('a',2),board)));
+        lista.addTail(new BlackRook(new Cell(new Coordinate('a',2),board)));
+        lista.addTail(new WhiteRook(new Cell(new Coordinate('a',2),board)));
+
+        assertDoesNotThrow(new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                System.out.println(lista);
+                System.out.println(lista.toStringReverse());
+            }
+        });
+    }
 }

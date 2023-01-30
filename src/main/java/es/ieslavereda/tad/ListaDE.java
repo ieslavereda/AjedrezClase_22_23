@@ -23,6 +23,17 @@ public class ListaDE {
     }
 
     public void addTail(Piece piece){
+        Node node = new Node(piece);
+
+        if(head==null){
+            head = node;
+            tail = node;
+        }else{
+            node.setPrevious(tail);
+            tail.setNext(node);
+            tail=node;
+        }
+        size++;
 
     }
 
